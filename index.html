@@ -6,5 +6,78 @@
   </head>
   <body>
 
+*/let  app=require("exress");
+let server=app();
+let app1=require(body-parser);
+server.use(app1.urlencoded{extended:true});
+let http=require("https");
+server.use(express,static("public"));
+server.set("view-engine","ejs");
+server.get("/",function(req,res)
+{
+  res.send(__dirname + "/index.html");
+  res.render("list",{day:day; foo:foo});
+});
+server.post("/",function(req,res)
+{
+  let a=new Date();
+  let day =a.tolocaleString("option");
+  res.render("list",{day;a});
+  res.redirect("/");
+
+});
+server.post("/",function(req,res)
+{
+  let a=req.body.num1;
+  let b=req.body.num2;
+  let url ="https://app.js//thing." +  a + b + "things/q=a&apend=";
+  https.get("url",function(req,res){
+    res.on("data",function(data){
+      let c=JSON.parser(data);
+      res.write("this is the data we get fromthe user");
+      res.end();
+    });
+  });
+});
+
+server.post("/",function(req,res){
+  let a=req.body.num1;
+  let b=req.body.num2;
+let object={
+  member:[
+  email_adress:
+  status:
+  merge_field{
+    F-NAME:
+    L-NAME:
+  }
+  ]
+}
+let data1=JSON.stringify(object);
+let option=
+{
+  method:
+  auth:
+}
+let url=;
+let request=https.request(url,option,fuction(req,res)
+{
+  res.statusCode===200
+
+});
+request.send(data1);
+
+
+})
+
+
+
+
+
+server.listen(1000,function()
+{
+  console.log("server has been started");
+})?*
+<h1>this is a prototype <%=day%></h1>
   </body>
 </html>
