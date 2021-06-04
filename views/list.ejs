@@ -1,23 +1,22 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>ejs</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  </head>
-  <body>
-    <h1 style="color:red";>   <%=day%></h1>
- <li>eat-food</li>
- <li>repeat-food</li>
- <li>again-eat-food</li>
- <li> <%=day1%></li>
- <form class="" action="/" method="post">
-   <input type="text" name="num1" value="text" placeholder="Enter-Item">
-   <button type="submit" name="button" class=" btn btn-lg btn -dark">Submit</button>
+<%- include('header'); -%>
+<div class="box" id="heading">
 
- </form>
+  <h1> <%=listTitle %></h1>
 
-  </body>
-</html>
+</div>
+ <div class="box">
+
+     <%  for(let i=0 ; i<day1.length ;i++)
+     { %>
+       <div class="item">
+         <input type="checkbox" >
+            <p> <%=  day1[i]   %></p>
+       </div>
+       <% } %>
+
+<form class="item"  action="/" method="post">
+  <input  type="text" name="num1" placeholder="New Item" value="" autocomplete="off">
+  <button type="submit" name="list" value=<%= listTitle%> >+</button>
+</form>
+</div>
+ <%- include('footer'); -%>
